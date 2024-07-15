@@ -19,38 +19,71 @@ Una dirección IP (del inglés, Internet Protocol) es una etiqueta numérica que
 
 Una dirección IP tiene dos funciones principales: identificación de la interfaz de red y direccionamiento para su ubicación.
 
-Una dirección IP es un número de 32 bits que a su vez esta divido en 4 bloque de 8 bits
-
-Clase	Bits iniciales	Intervalo (*)	N.º de redes	N.º de direcciones por red	N.º de hosts por red(‡)	Máscara de red	Dirección de broadcast
-A	0	0.0.0.0 (**) - 127.255.255.255 (†)	128	16 777 216	16 777 214	255.0.0.0	x.255.255.255
-B	10	128.0.0.0 - 191.255.255.255	16 382	65 536	65 534	255.255.0.0	x.x.255.255
-C	110	192.0.0.0 - 223.255.255.255	2 097 150	256	254	255.255.255.0	x.x.x.255
-D (Multicast)	1110	224.0.0.0 - 239.255.255.255	 	 	 	 	 
-E (experimental)	1111	240.0.0.0 - 255.255.255.254	 	 	 	 	 
+Una dirección IP es un número de 32 bits que a su vez esta divido en 4 bloque de 8 bits 	 	 
 
 <table>
     <thead>
         <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
+            <th>Clase</th>
+            <th>Bits iniciales</th>
+            <th>Intervalo (*)</th>
+            <th>N.º de redes</th>
+            <th>N.º de direcciones por red</th>
+            <th>N.º de hosts por red(‡)</th>
+            <th>Máscara de red</th>
+            <th>Dirección de broadcast</th>            
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td rowspan=4 align="center">R1 Text</td>
-            <td rowspan=2 align="center">R2 Text A</td>
-            <td align="center">R3 Text A</td>
+            <td>A</td>
+            <td>0</td>
+            <td>0.0.0.0 (**) - 127.255.255.255 (†)</td>
+            <td>128</td>
+            <td>16 777 216</td>
+            <td>16 777 214</td>
+            <td>255.0.0.0</td>
+            <td>x.255.255.255</td>
         </tr>
         <tr>
-            <td align="center">R3 Text B</td>
+            <td>B</td>
+            <td>10</td>
+            <td>128.0.0.0 - 191.255.255.255</td>
+            <td>16 382</td>
+            <td>65 536</td>
+            <td>65 534</td>
+            <td>255.255.0.0</td>
+            <td>x.x.255.255</td>
         </tr>
         <tr>
-            <td rowspan=2 align="center">R2 Text B</td>
-            <td align="center">R3 Text C</td>
+            <td>C</td>
+            <td>110</td>
+            <td>192.0.0.0 - 223.255.255.255</td>
+            <td>2 097 150</td>
+            <td>256</td>
+            <td>254</td>
+            <td>255.255.255.0</td>
+            <td>x.x.x.255</td>
         </tr>
         <tr>
-            <td align="center">R3 Text D</td>
+            <td>D (Multicast)</td>
+            <td>1110</td>
+            <td>224.0.0.0 - 239.255.255.255</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
+        <tr>
+            <td>E (experimental)</td>
+            <td>1111</td>
+            <td>240.0.0.0 - 255.255.255.254</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>                                
     </tbody>
 </table>
