@@ -276,9 +276,50 @@ Paso 1 Convertir un caracter cada vez
 Paso 2 Convertir a Decimal
 Paso 3 Convertir a Binario
 
-Decimal
- 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15
- 0,  1,  2,  3,  4,  5,  6,  7,  8,  9,   A,  B,   C,   D,   E,   F 
+<table>
+    <thead>
+        <tr>
+            <th align="center">Decimal</th>
+            <th align="center">0</th>
+            <th align="center">1</th>
+            <th align="center">2</th>
+            <th align="center">3</th>
+            <th align="center">4</th>
+            <th align="center">5</th>
+            <th align="center">6</th>
+            <th align="center">7</th>                         
+            <th align="center">8</th>
+            <th align="center">9</th>
+            <th align="center">10</th>
+            <th align="center">11</th>
+            <th align="center">12</th>
+            <th align="center">13</th>
+            <th align="center">14</th>
+            <th align="center">15</th>           
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th align="center">Hexadecimal</th>
+            <th align="center">0</th>
+            <th align="center">1</th>
+            <th align="center">2</th>
+            <th align="center">3</th>
+            <th align="center">4</th>
+            <th align="center">5</th>
+            <th align="center">6</th>
+            <th align="center">7</th>                         
+            <th align="center">8</th>
+            <th align="center">9</th>
+            <th align="center">A</th>
+            <th align="center">B</th>
+            <th align="center">C</th>
+            <th align="center">D</th>
+            <th align="center">E</th>
+            <th align="center">F</th>  
+        </tr>                                
+    </tbody>
+</table>  
 Hexadecimal
 Ejemplo 
 Hexadecimal F en Decimal es 15 en Binario 1111
