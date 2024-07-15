@@ -131,40 +131,40 @@ se crean 16 subredes
 Cada una de esas subredes tiene menos capacidad de Hosts
 
 Ejemplo de clase C
-IP       192.168.168.0	
-BINARIO  11000000.10101000.10101000.00000000
-MASCARA  255.255.255.0	
-BINARIO  11111111.11111111.11111111.00000000
-Bits de Host 2 ^8 = 256
+IP       192.168.168.0<br />
+BINARIO  11000000.10101000.10101000.00000000<br />
+MASCARA  255.255.255.0<br />
+BINARIO  11111111.11111111.11111111.00000000<br />
+Bits de Host 2 ^8 = 256<br />
 
-Creamos 8 subredes
-MASCARA  255.255.255.224
-BINARIO  11111111.11111111.11111111.11100000
-Bits de Host 2 ^3 = 8
-Subredes Creadas
-IP       192.168.168.0	
-BINARIO  11000000.10101000.10101000.00000000
-IP       192.168.168.32	
-BINARIO  11000000.10101000.10101000.00100000
-IP       192.168.168.64	
-BINARIO  11000000.10101000.10101000.01000000
-IP       192.168.168.96
-BINARIO  11000000.10101000.10101000.01100000
-IP       192.168.168.128
-BINARIO  11000000.10101000.10101000.10000000
-IP       192.168.168.160
-BINARIO  11000000.10101000.10101000.10100000
-IP       192.168.168.192
-BINARIO  11000000.10101000.10101000.11000000
-IP       192.168.168.224
-BINARIO  11000000.10101000.10101000.11100000
+Creamos 8 subredes<br />
+MASCARA  255.255.255.224<br />
+BINARIO  11111111.11111111.11111111.11100000<br />
+Bits de Host 2 ^3 = 8<br />
+Subredes Creadas<br />
+IP       192.168.168.0<br />	
+BINARIO  11000000.10101000.10101000.00000000<br />
+IP       192.168.168.32	<br />
+BINARIO  11000000.10101000.10101000.00100000<br />
+IP       192.168.168.64	<br />
+BINARIO  11000000.10101000.10101000.01000000<br />
+IP       192.168.168.96<br />
+BINARIO  11000000.10101000.10101000.01100000<br />
+IP       192.168.168.128<br />
+BINARIO  11000000.10101000.10101000.10000000<br />
+IP       192.168.168.160<br />
+BINARIO  11000000.10101000.10101000.10100000<br />
+IP       192.168.168.192<br />
+BINARIO  11000000.10101000.10101000.11000000<br />
+IP       192.168.168.224<br />
+BINARIO  11000000.10101000.10101000.11100000<br />
 
-En el caso de esta última subred
-HOST     192.168.168.225
-BINARIO  11000000.10101000.10101000.11100001
-...
-HOST     192.168.168.254
-BINARIO  11000000.10101000.10101000.11111110
+En el caso de esta última subred<br />
+HOST     192.168.168.225<br />
+BINARIO  11000000.10101000.10101000.11100001<br />
+...<br />
+HOST     192.168.168.254<br />
+BINARIO  11000000.10101000.10101000.11111110<br />
 
 
 
@@ -179,36 +179,33 @@ Sistema Hexadecimal ( Base 16 )
 
 Binario a Decimal
 ( Base 2 ) 10101010
-128  64  32  16   8   4   2   1
-   1     0    1     0   1   0   1   0
-
 <table>
     <thead>
         <tr>
-            <th>128</th>            
-            <th>64</th>
-            <th>32</th>
-            <th>16</th>
-            <th>8</th>
-            <th>4</th>
-            <th>2</th>
-            <th>1</th>            
+            <th align="center">128</th>            
+            <th align="center">64</th>
+            <th align="center">32</th>
+            <th align="center">16</th>
+            <th align="center">8</th>
+            <th align="center">4</th>
+            <th align="center">2</th>
+            <th align="center">1</th>            
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>1</td>
-            <td>0</td>
-            <td>1</td>
-            <td>0</td>
-            <td>1</td>
-            <td>0</td>
-            <td>1</td>
-            <td>0</td>
+            <td align="center">1</td>
+            <td align="center">0</td>
+            <td align="center">1</td>
+            <td align="center">0</td>
+            <td align="center">1</td>
+            <td align="center">0</td>
+            <td align="center">1</td>
+            <td align="center">0</td>
         </tr>                                
     </tbody>
 </table> 
-  
+
 Sumamos los que son 1:
 128 + 32 + 8 + 2 = 170
 
@@ -219,10 +216,60 @@ Decimal a Binario
 132 = 128 + 4
 128  64  32  16   8   4   2   1
    1     0    0     0   0   1   0   0
+<table>
+    <thead>
+        <tr>
+            <th align="center">128</th>            
+            <th align="center">64</th>
+            <th align="center">32</th>
+            <th align="center">16</th>
+            <th align="center">8</th>
+            <th align="center">4</th>
+            <th align="center">2</th>
+            <th align="center">1</th>            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">1</td>
+            <td align="center">0</td>
+            <td align="center">0</td>
+            <td align="center">0</td>
+            <td align="center">0</td>
+            <td align="center">1</td>
+            <td align="center">0</td>
+            <td align="center">0</td>
+        </tr>                                
+    </tbody>
+</table>    
 ( Base 10 ) 236
 236 = 128 + 64 + 32 + 8 + 4
-128  64  32  16   8   4   2   1
-   1     1    1     0    1   1   0  0
+<table>
+    <thead>
+        <tr>
+            <th align="center">128</th>            
+            <th align="center">64</th>
+            <th align="center">32</th>
+            <th align="center">16</th>
+            <th align="center">8</th>
+            <th align="center">4</th>
+            <th align="center">2</th>
+            <th align="center">1</th>            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">1</td>
+            <td align="center">1</td>
+            <td align="center">1</td>
+            <td align="center">0</td>
+            <td align="center">1</td>
+            <td align="center">1</td>
+            <td align="center">0</td>
+            <td align="center">0</td>
+        </tr>                                
+    </tbody>
+</table>  
 
 Conversion Hexadecimal
 Paso 1 Convertir un caracter cada vez
@@ -237,3 +284,21 @@ Ejemplo
 Hexadecimal F en Decimal es 15 en Binario
 8  4  2  1
 1  1  1  1
+<table>
+    <thead>
+        <tr>
+            <th align="center">8</th>
+            <th align="center">4</th>
+            <th align="center">2</th>
+            <th align="center">1</th>            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">1</td>
+            <td align="center">1</td>
+            <td align="center">1</td>
+            <td align="center">1</td>
+        </tr>                                
+    </tbody>
+</table>  
