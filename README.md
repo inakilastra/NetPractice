@@ -21,6 +21,28 @@ Una dirección IP tiene dos funciones principales: identificación de la interfa
 
 Una dirección IP es un número de 32 bits que a su vez esta divido en 4 bloque de 8 bits 	 	 
 
+
+<h4>CLASES DE DIRECCIONES  IPV4</h4>
+
+> Existen cinco clases de direcciones IP y el primer octeto determina la clase:
+>
+> - CLASE A - Soporta redes en Internet grandes.
+>             Red . Host . Host . Host
+>             Primer octeto 0 - 127 /8
+>             Mascara 255.0.0.0
+> - CLASE B - Soporta redes en Internet moderadas
+>             Red . Red . Host . Host
+>             Primer octeto 128 - 191  /16
+>             Mascara 255.255.0.0
+> - CLASE C - Soporta redes en internet pequeñas.
+>             Red . Red . Red . Host
+>             Primer octeto 192 - 223 /24
+>             Mascara 255.255.255.0
+> - CLASE D - Soporta Redes Multicast
+>             Primer octeto 224 - 239
+> - CLASE E - Sin uso. Redes experimentales.
+>             Primer octeto 240 - 255
+
 <table>
     <thead>
         <tr>
@@ -91,3 +113,127 @@ Una dirección IP es un número de 32 bits que a su vez esta divido en 4 bloque 
 (**) La dirección 0.0.0.0 es reservada por la IANA para identificación local.
 (***) Las direcciones 127.x.x.x se reservan para designar la propia máquina. Se denomina dirección de bucle local o loopback.
 (****) La primera dirección se reserva para identificar la red (p.ej. 18.0.0.0), mientras que la última dirección se emplea como dirección de difusión o broadcast (p.ej. 18.255.255.255). Ese es el motivo por el que el número máximo de hosts en una red es siempre igual al número de direcciones disponibles en un rango específico menos dos.
+
+<h3>Mascara subred</h3>
+
+La Máscara determina el número de subredes.
+
+Una clase A con Máscara 255.0.0.0 tiene una unica red con hasta 16.777.214 Host 2 ^24 - 2 (reservados 0 y 255)
+
+Si queremos crear subredes, ejemplo:
+Máscara 255.0.0.0  11111111.0000000.00000000.00000000
+
+Si usamos 4 bits del segundo octeto
+11111111.**1111**000.00000000.00000000
+
+se crean 16 subredes
+2 ^4 = 16 y la Máscara pasa a ser: 255.240.0.0
+Cada una de esas subredes tiene menos capacidad de Hosts
+
+Ejemplo de clase C
+IP       192.168.168.0	
+BINARIO  11000000.10101000.10101000.00000000
+MASCARA  255.255.255.0	
+BINARIO  11111111.11111111.11111111.00000000
+Bits de Host 2 ^8 = 256
+
+Creamos 8 subredes
+MASCARA  255.255.255.224
+BINARIO  11111111.11111111.11111111.11100000
+Bits de Host 2 ^3 = 8
+Subredes Creadas
+IP       192.168.168.0	
+BINARIO  11000000.10101000.10101000.00000000
+IP       192.168.168.32	
+BINARIO  11000000.10101000.10101000.00100000
+IP       192.168.168.64	
+BINARIO  11000000.10101000.10101000.01000000
+IP       192.168.168.96
+BINARIO  11000000.10101000.10101000.01100000
+IP       192.168.168.128
+BINARIO  11000000.10101000.10101000.10000000
+IP       192.168.168.160
+BINARIO  11000000.10101000.10101000.10100000
+IP       192.168.168.192
+BINARIO  11000000.10101000.10101000.11000000
+IP       192.168.168.224
+BINARIO  11000000.10101000.10101000.11100000
+
+En el caso de esta última subred
+HOST     192.168.168.225
+BINARIO  11000000.10101000.10101000.11100001
+...
+HOST     192.168.168.254
+BINARIO  11000000.10101000.10101000.11111110
+
+
+
+Conversión Binario, Decimal y Hexadecimal
+
+Sistema Binario ( Base 2 )
+{ 0, 1 }
+Sistema Decimal ( Base 10 )
+{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9  }
+Sistema Hexadecimal ( Base 16 )
+{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F  }
+
+Binario a Decimal
+( Base 2 ) 10101010
+128  64  32  16   8   4   2   1
+   1     0    1     0   1   0   1   0
+
+<table>
+    <thead>
+        <tr>
+            <th>128</th>            
+            <th>64</th>
+            <th>32</th>
+            <th>16</th>
+            <th>8</th>
+            <th>4</th>
+            <th>2</th>
+            <th>1</th>            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>                                
+    </tbody>
+</table> 
+  
+Sumamos los que son 1:
+128 + 32 + 8 + 2 = 170
+
+Min 0 Max 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 =  255
+
+Decimal a Binario
+( Base 10 ) 132
+132 = 128 + 4
+128  64  32  16   8   4   2   1
+   1     0    0     0   0   1   0   0
+( Base 10 ) 236
+236 = 128 + 64 + 32 + 8 + 4
+128  64  32  16   8   4   2   1
+   1     1    1     0    1   1   0  0
+
+Conversion Hexadecimal
+Paso 1 Convertir un caracter cada vez
+Paso 2 Convertir a Decimal
+Paso 3 Convertir a Binario
+
+Decimal
+ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15
+ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9,   A,  B,   C,   D,   E,   F 
+Hexadecimal
+Ejemplo 
+Hexadecimal F en Decimal es 15 en Binario
+8  4  2  1
+1  1  1  1
