@@ -109,9 +109,9 @@ Una dirección IP es un número de 32 bits que a su vez esta divido en 4 bloque 
         </tr>                                
     </tbody>
 </table>
-(*) La dirección que tiene los bits de host iguales a 0 sirve para definir la red en la que se ubica. Se denomina dirección de red. La dirección que tiene los bits correspondientes a host iguales a 1,1​ sirve para enviar paquetes a todos los hosts de la red en la que se ubica. Se denomina dirección de broadcast.
-(**) La dirección 0.0.0.0 es reservada por la IANA para identificación local.
-(***) Las direcciones 127.x.x.x se reservan para designar la propia máquina. Se denomina dirección de bucle local o loopback.
+(*) La dirección que tiene los bits de host iguales a 0 sirve para definir la red en la que se ubica. Se denomina dirección de red. La dirección que tiene los bits correspondientes a host iguales a 1,1​ sirve para enviar paquetes a todos los hosts de la red en la que se ubica. Se denomina dirección de broadcast.<br />
+(**) La dirección 0.0.0.0 es reservada por la IANA para identificación local.<br />
+(***) Las direcciones 127.x.x.x se reservan para designar la propia máquina. Se denomina dirección de bucle local o loopback.<br />
 (****) La primera dirección se reserva para identificar la red (p.ej. 18.0.0.0), mientras que la última dirección se emplea como dirección de difusión o broadcast (p.ej. 18.255.255.255). Ese es el motivo por el que el número máximo de hosts en una red es siempre igual al número de direcciones disponibles en un rango específico menos dos.
 
 <h3>Mascara subred</h3>
@@ -127,7 +127,7 @@ Si usamos 4 bits del segundo octeto
 11111111.**1111**000.00000000.00000000
 
 se crean 16 subredes
-2 ^4 = 16 y la Máscara pasa a ser: 255.240.0.0
+2 ^4 = 16 y la Máscara pasa a ser: 255.240.0.0<br />
 Cada una de esas subredes tiene menos capacidad de Hosts
 
 Ejemplo de clase C
@@ -281,9 +281,7 @@ Decimal
  0,  1,  2,  3,  4,  5,  6,  7,  8,  9,   A,  B,   C,   D,   E,   F 
 Hexadecimal
 Ejemplo 
-Hexadecimal F en Decimal es 15 en Binario
-8  4  2  1
-1  1  1  1
+Hexadecimal F en Decimal es 15 en Binario 1111
 <table>
     <thead>
         <tr>
