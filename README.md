@@ -29,7 +29,7 @@ Una dirección IP es un número de 32 bits que a su vez esta divido en 4 bloque 
             <th>Intervalo (*)</th>
             <th>N.º de redes</th>
             <th>N.º de direcciones por red</th>
-            <th>N.º de hosts por red(‡)</th>
+            <th>N.º de hosts por red(****)</th>
             <th>Máscara de red</th>
             <th>Dirección de broadcast</th>            
         </tr>
@@ -38,7 +38,7 @@ Una dirección IP es un número de 32 bits que a su vez esta divido en 4 bloque 
         <tr>
             <td>A</td>
             <td>0</td>
-            <td>0.0.0.0 (**) - 127.255.255.255 (†)</td>
+            <td>0.0.0.0 (**) - 127.255.255.255 (***)</td>
             <td>128</td>
             <td>16 777 216</td>
             <td>16 777 214</td>
@@ -87,3 +87,7 @@ Una dirección IP es un número de 32 bits que a su vez esta divido en 4 bloque 
         </tr>                                
     </tbody>
 </table>
+(*) La dirección que tiene los bits de host iguales a 0 sirve para definir la red en la que se ubica. Se denomina dirección de red. La dirección que tiene los bits correspondientes a host iguales a 1,1​ sirve para enviar paquetes a todos los hosts de la red en la que se ubica. Se denomina dirección de broadcast.
+(**) La dirección 0.0.0.0 es reservada por la IANA para identificación local.
+(***) Las direcciones 127.x.x.x se reservan para designar la propia máquina. Se denomina dirección de bucle local o loopback.
+(****) La primera dirección se reserva para identificar la red (p.ej. 18.0.0.0), mientras que la última dirección se emplea como dirección de difusión o broadcast (p.ej. 18.255.255.255). Ese es el motivo por el que el número máximo de hosts en una red es siempre igual al número de direcciones disponibles en un rango específico menos dos.
